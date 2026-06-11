@@ -47,8 +47,8 @@ h1, h2, h3 {
     url("../images/surf-lead-sd-hero.jpeg") center center / cover no-repeat;
   transform: scale(1.08);
   filter: blur(0px);
-  transition: filter 0.2s ease;
-  will-change: filter;
+  transition: filter 0.2s ease, transform 0.2s ease;
+  will-change: filter, transform;
 }
 
 .hero {

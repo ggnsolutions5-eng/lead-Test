@@ -142,6 +142,8 @@ function setupHeroFade() {
   const heroBg = document.querySelector(".hero-bg");
   const fadeDistance = window.innerHeight * 0.85;
   const maxBlur = 3;
+  const baseScale = 1.08;
+  const maxScale = 1.25;
 
   function onScroll() {
     const progress = Math.min(1, window.scrollY / fadeDistance);
@@ -149,6 +151,7 @@ function setupHeroFade() {
     hero.style.opacity = opacity;
     hero.style.pointerEvents = opacity < 0.05 ? "none" : "auto";
     heroBg.style.filter = `blur(${progress * maxBlur}px)`;
+    heroBg.style.transform = `scale(${baseScale + progress * (maxScale - baseScale)})`;
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
