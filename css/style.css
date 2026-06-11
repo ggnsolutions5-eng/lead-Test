@@ -367,16 +367,27 @@ main > *:last-child {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin: 0 0 28px;
-  padding: 18px 22px;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding: 18px calc((100vw - 1200px) / 2 + 22px);
   background: var(--card-bg);
   backdrop-filter: var(--card-blur);
   -webkit-backdrop-filter: var(--card-blur);
-  border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--card-border);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
   border-left: 3px solid var(--accent);
-  overflow: hidden;
+}
+
+@media (max-width: 1240px) {
+  .section-header {
+    padding: 18px 22px;
+  }
 }
 
 .section-icon {
