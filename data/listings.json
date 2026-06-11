@@ -10,12 +10,12 @@
       "title": "Hotels",
       "listings": [
         {
-          "name": "Example Hotel Name",
-          "description": "Short description of the hotel, amenities, and what makes it convenient for our crew.",
-          "address": "123 Main St, Lead, SD",
-          "priceRange": "$80 - $120/night",
-          "image": "",
-          "bookingUrl": "https://example.com"
+          "name": "Blackstone Lodge & Suites",
+          "description": "Hotel in Lead with outdoor hot tubs, on-site lounge, free hot breakfast, weekend shuttle to Deadwood, free WiFi, ample parking, and pet-friendly rooms.",
+          "address": "395 Glendale Dr, Lead, SD 57754",
+          "priceRange": "Contact hotel for current rates",
+          "image": "https://blackstonelodgelead.com/wp-content/uploads/2022/04/Outside-Entry-1024x947.jpg",
+          "bookingUrl": "https://blackstonelodgelead.com/"
         }
       ]
     },
