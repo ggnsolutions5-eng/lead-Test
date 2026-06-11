@@ -139,13 +139,16 @@ function setupContactForm() {
 
 function setupHeroFade() {
   const hero = document.querySelector(".hero");
+  const heroBg = document.querySelector(".hero-bg");
   const fadeDistance = window.innerHeight * 0.85;
+  const maxBlur = 16;
 
   function onScroll() {
     const progress = Math.min(1, window.scrollY / fadeDistance);
     const opacity = Math.max(0, 1 - progress);
     hero.style.opacity = opacity;
     hero.style.pointerEvents = opacity < 0.05 ? "none" : "auto";
+    heroBg.style.filter = `blur(${progress * maxBlur}px)`;
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
