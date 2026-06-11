@@ -28,6 +28,7 @@ async function loadListings() {
 function renderSiteInfo(siteInfo) {
   document.getElementById("company-name").textContent = `${siteInfo.companyName} ${siteInfo.tagline ? "— " + siteInfo.tagline : ""}`;
   document.getElementById("project-name").textContent = siteInfo.projectName;
+  document.getElementById("project-subtitle").textContent = siteInfo.subtitle || "";
   document.getElementById("intro-text").textContent = siteInfo.introText;
   document.getElementById("year").textContent = new Date().getFullYear();
   document.title = `${siteInfo.companyName} - ${siteInfo.tagline || "Worker Accommodations"}`;
