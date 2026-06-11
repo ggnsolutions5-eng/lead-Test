@@ -1,50 +1,74 @@
 {
   "siteInfo": {
     "companyName": "GGN Solutions Inc.",
-    "projectName": "Lead, SD Construction Project",
-    "introText": "GGN Solutions Inc. has partnered with local hotels, motels, and short-term rentals near Lead, SD to make it easy for our crew to find and book accommodation during the project. Browse the options below and click through to book directly with the provider."
+    "tagline": "Worker Housing Marketplace",
+    "projectName": "FFDG Lead, SD Construction Project",
+    "introText": "GGN Solutions Inc. is proud to manage accommodations for workers on the Fermi Forward Discovery Group (FFDG) construction project in Lead, SD. Browse hotels, motels, and short-term furnished houses below, then click through to book directly with the provider — you pay the provider directly for your stay."
   },
   "categories": [
     {
       "id": "hotels",
-      "title": "Hotels",
+      "title": "Hotels & Resorts",
       "listings": [
         {
-          "name": "Blackstone Lodge & Suites",
-          "description": "Hotel in Lead with outdoor hot tubs, on-site lounge, free hot breakfast, weekend shuttle to Deadwood, free WiFi, ample parking, and pet-friendly rooms.",
-          "address": "395 Glendale Dr, Lead, SD 57754",
-          "priceRange": "Contact hotel for current rates",
-          "image": "https://blackstonelodgelead.com/wp-content/uploads/2022/04/Outside-Entry-1024x947.jpg",
-          "bookingUrl": "https://blackstonelodgelead.com/",
-          "amenities": ["wifi", "breakfast", "parking", "hotTub", "lounge", "shuttle", "pets"]
+          "name": "Super 8 by Wyndham Deadwood/Black Hills Area",
+          "description": "Budget-friendly hotel on the Mickelson Trail with an indoor pool, hot tub, on-site casino, and free continental breakfast.",
+          "address": "196 Cliff Street, Deadwood, SD 57732",
+          "priceRange": "Check rates on booking site",
+          "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/619-super-8-deadwood-3794.jpg",
+          "bookingUrl": "https://www.wyndhamhotels.com/super-8/deadwood-south-dakota/super-8-deadwood-black-hills-area/overview?CID=LC:yytq4fvvehxh7se:3557&iata=00093796",
+          "amenities": ["wifi", "breakfast", "pool", "hotTub", "parking", "casino"]
+        },
+        {
+          "name": "Deadwood Gulch Resort, Trademark Collection by Wyndham",
+          "description": "Resort along Whitewood Creek with a 24/7 casino, fitness center, hot tub, and rooms featuring mini-fridges and microwaves.",
+          "address": "304 Cliff St, Deadwood, SD 57732",
+          "priceRange": "Check rates on booking site",
+          "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/150-deadwood-gulch-gaming-resort-4717.jpg",
+          "bookingUrl": "https://www.wyndhamhotels.com/trademark/deadwood-south-dakota/deadwood-gulch%20resort-trademark-collection/overview?CID=LC:4d7auublw4ufaga:56079&iata=00093796",
+          "amenities": ["wifi", "hotTub", "gym", "lounge", "parking", "casino", "kitchen"]
+        },
+        {
+          "name": "Comfort Inn & Suites Deadwood",
+          "description": "Smoke-free hotel with an indoor heated pool, hot tub, fitness center, free hot breakfast, and on-site lounge.",
+          "address": "225 Cliff St, Deadwood, SD 57732",
+          "priceRange": "Check rates on booking site",
+          "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/603-deadwood-comfort-inn-and-suites-3696.jpg",
+          "bookingUrl": "https://www.choicehotels.com/south-dakota/deadwood/comfort-inn-hotels/sd053?mc=llgoxxpx",
+          "amenities": ["wifi", "breakfast", "pool", "hotTub", "gym", "lounge", "laundry", "parking"]
         }
       ]
     },
     {
-      "id": "motels",
-      "title": "Motels",
+      "id": "houses",
+      "title": "Houses & Apartments",
       "listings": [
         {
-          "name": "Example Motel Name",
-          "description": "Short description of the motel, amenities, and what makes it convenient for our crew.",
-          "address": "456 Side St, Lead, SD",
-          "priceRange": "$50 - $80/night",
+          "name": "Entire Home in Lead, South Dakota",
+          "description": "A fully furnished entire home, ideal for crew members who want a private house with full amenities during their stay.",
+          "address": "Lead, South Dakota",
+          "priceRange": "Check rates on Airbnb",
           "image": "",
-          "bookingUrl": "https://example.com"
-        }
-      ]
-    },
-    {
-      "id": "airbnb",
-      "title": "Airbnb / Short-Term Rentals",
-      "listings": [
+          "bookingUrl": "https://www.airbnb.com/rooms/1687955270668350488",
+          "amenities": ["wifi", "kitchen", "parking", "laundry"]
+        },
         {
-          "name": "Example Airbnb Listing",
-          "description": "Short description of the rental, number of bedrooms, and notes for crew sharing a unit.",
-          "address": "789 Rental Rd, Lead, SD",
-          "priceRange": "$100 - $150/night",
+          "name": "Entire Condo near Lead, South Dakota",
+          "description": "A fully furnished condo with private entrance, great for workers who prefer a quieter, low-maintenance stay.",
+          "address": "Lead, South Dakota area",
+          "priceRange": "Check rates on Airbnb",
           "image": "",
-          "bookingUrl": "https://www.airbnb.com"
+          "bookingUrl": "https://www.airbnb.com/rooms/1430573648771734632",
+          "amenities": ["wifi", "kitchen", "parking", "laundry"]
+        },
+        {
+          "name": "Entire Rental Apartment Unit near Lead, South Dakota",
+          "description": "A private, fully furnished apartment unit, a comfortable option for longer-term stays during the project.",
+          "address": "Lead, South Dakota area",
+          "priceRange": "Check rates on Airbnb",
+          "image": "",
+          "bookingUrl": "https://www.airbnb.com/rooms/840689433171566601",
+          "amenities": ["wifi", "kitchen", "parking", "laundry"]
         }
       ]
     }

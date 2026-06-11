@@ -1,8 +1,9 @@
-# GGN Solutions Inc. - Worker Accommodation Directory
+# GGN Solutions Inc. - Worker Housing Marketplace
 
-A simple static website that lists partner hotels, motels, and Airbnb / short-term
-rentals near the Lead, SD construction project. Construction crew members can browse
-the options and click "Book Now" to go directly to each provider's booking page.
+A static, Expedia-style website where workers on the FFDG (Fermi Forward Discovery
+Group) construction project in Lead, SD can browse partner hotels and short-term
+furnished houses/apartments managed by GGN Solutions Inc., and click "View & Book"
+to book and pay directly with each provider.
 
 ## Project structure
 
@@ -13,8 +14,8 @@ the options and click "Book Now" to go directly to each provider's booking page.
 
 ## Editing listings
 
-Open `data/listings.json` and edit the `categories` array. Each category (Hotels,
-Motels, Airbnb) has a `listings` array. Each listing supports:
+Open `data/listings.json` and edit the `categories` array. Each category (Hotels &
+Resorts, Houses & Apartments) has a `listings` array. Each listing supports:
 
 - `name` - name of the property
 - `description` - short description
@@ -24,9 +25,18 @@ Motels, Airbnb) has a `listings` array. Each listing supports:
 - `bookingUrl` - link to the property's booking page or listing
 - `amenities` - optional array of amenity keys shown as icons. Supported keys:
   `wifi`, `breakfast`, `parking`, `hotTub`, `pool`, `gym`, `lounge`, `shuttle`,
-  `pets`, `kitchen`, `laundry`, `ac`
+  `pets`, `kitchen`, `laundry`, `ac`, `casino`
 
-You can also edit `siteInfo` to change the company name, project name, and intro text.
+You can also edit `siteInfo` to change the company name, tagline, project name,
+and intro text.
+
+### Note on Airbnb listings
+
+Airbnb blocks automated tools from reading listing photos/details, so the three
+house/apartment listings currently use a placeholder image. To use real photos,
+download the photo from the Airbnb listing yourself and either host it
+elsewhere (e.g. an `images/` folder in this repo) and set `image` to that path,
+or paste a direct image URL.
 
 ## Complaint/contact form
 

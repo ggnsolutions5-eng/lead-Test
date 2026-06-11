@@ -1,10 +1,12 @@
 :root {
-  --primary: #1a3c5e;
-  --accent: #f7941d;
-  --bg: #f4f6f8;
+  --primary: #003580;
+  --primary-dark: #00224f;
+  --accent: #ff6f1e;
+  --bg: #f1f4f8;
   --card-bg: #ffffff;
-  --text: #222;
+  --text: #1a1a1a;
   --muted: #666;
+  --border: #e2e6ec;
 }
 
 * {
@@ -18,91 +20,120 @@ body {
   color: var(--text);
 }
 
-.site-header {
-  background: var(--primary);
+/* Hero / header */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: #fff;
-  padding: 24px 16px;
-  text-align: center;
+  padding-bottom: 48px;
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.site-header p {
-  margin: 4px 0 0;
-  color: #cfe0ee;
-}
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-.intro {
-  background: var(--card-bg);
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin: 16px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.category-nav {
+.top-nav {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  gap: 12px;
+  padding: 16px 24px;
 }
 
-.category-nav a {
-  background: var(--primary);
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.top-nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.top-nav-links a {
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
   text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background 0.15s ease;
 }
 
-.category-nav a:hover {
+.top-nav-links a:hover {
   background: var(--accent);
 }
 
+.hero-content {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  margin: 0 0 12px;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #dce6f5;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+main {
+  max-width: 1200px;
+  margin: -32px auto 0;
+  padding: 0 16px 16px;
+  position: relative;
+}
+
 .category-section {
-  margin-bottom: 32px;
+  background: transparent;
+  margin: 32px 0;
 }
 
 .category-section h2 {
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
-  color: var(--primary);
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: var(--card-bg);
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 190px;
   object-fit: cover;
   background: #ddd;
 }
 
 .card-body {
-  padding: 14px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -110,22 +141,35 @@ main {
 
 .card-body h3 {
   margin: 0 0 6px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--text);
 }
 
-.card-body .address,
-.card-body .price {
+.card-body .address {
   font-size: 0.85rem;
   color: var(--muted);
   margin: 2px 0;
 }
 
+.card-body .address::before {
+  content: "📍 ";
+}
+
+.card-body .price {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 6px 0 2px;
+}
+
 .card-body .description {
   margin: 8px 0;
   font-size: 0.9rem;
+  color: var(--text);
   flex: 1;
 }
 
+/* Amenities */
 .amenities {
   display: flex;
   flex-wrap: wrap;
@@ -138,10 +182,10 @@ main {
   align-items: center;
   gap: 4px;
   background: var(--bg);
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 3px 9px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
 }
 
@@ -160,30 +204,33 @@ main {
   text-align: center;
   background: var(--accent);
   color: #fff;
-  padding: 10px;
+  padding: 12px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 8px;
+  font-weight: 700;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
 }
 
 .book-btn:hover {
   background: var(--primary);
 }
 
+/* Contact section */
 .contact-section {
   background: var(--card-bg);
-  border-radius: 8px;
-  padding: 16px 20px;
+  border-radius: 10px;
+  padding: 24px;
   margin: 32px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .contact-section h2 {
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
-  color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 8px;
+  color: var(--primary-dark);
   margin-top: 0;
+  display: inline-block;
 }
 
 #contact-form {
@@ -194,29 +241,30 @@ main {
 }
 
 #contact-form label {
-  font-weight: bold;
-  margin-top: 8px;
+  font-weight: 600;
+  margin-top: 10px;
   font-size: 0.9rem;
 }
 
 #contact-form input,
 #contact-form textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
   font-family: inherit;
   font-size: 0.95rem;
 }
 
 #contact-form button {
-  margin-top: 12px;
+  margin-top: 14px;
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
+  letter-spacing: 0.3px;
 }
 
 #contact-form button:hover {
@@ -230,7 +278,7 @@ main {
 
 .site-footer {
   text-align: center;
-  padding: 16px;
+  padding: 24px 16px;
   color: var(--muted);
   font-size: 0.85rem;
 }

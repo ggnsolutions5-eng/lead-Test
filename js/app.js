@@ -14,6 +14,7 @@ const AMENITY_ICONS = {
   kitchen: { icon: "🍽️", label: "Kitchen" },
   laundry: { icon: "🧺", label: "Laundry" },
   ac: { icon: "❄️", label: "Air Conditioning" },
+  casino: { icon: "🎰", label: "Casino" },
 };
 
 async function loadListings() {
@@ -25,11 +26,11 @@ async function loadListings() {
 }
 
 function renderSiteInfo(siteInfo) {
-  document.getElementById("company-name").textContent = siteInfo.companyName;
+  document.getElementById("company-name").textContent = `${siteInfo.companyName} ${siteInfo.tagline ? "— " + siteInfo.tagline : ""}`;
   document.getElementById("project-name").textContent = siteInfo.projectName;
   document.getElementById("intro-text").textContent = siteInfo.introText;
   document.getElementById("year").textContent = new Date().getFullYear();
-  document.title = `${siteInfo.companyName} - Worker Accommodations`;
+  document.title = `${siteInfo.companyName} - ${siteInfo.tagline || "Worker Accommodations"}`;
 }
 
 function renderNav(categories) {
