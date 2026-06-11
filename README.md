@@ -30,14 +30,6 @@ Resorts, Houses & Apartments) has a `listings` array. Each listing supports:
 You can also edit `siteInfo` to change the company name, tagline, project name,
 and intro text.
 
-### Note on Airbnb listings
-
-Airbnb blocks automated tools from reading listing photos/details, so the three
-house/apartment listings currently use a placeholder image. To use real photos,
-download the photo from the Airbnb listing yourself and either host it
-elsewhere (e.g. an `images/` folder in this repo) and set `image` to that path,
-or paste a direct image URL.
-
 ## Complaint/contact form
 
 The "Contact / Complaints" section sends messages by email using

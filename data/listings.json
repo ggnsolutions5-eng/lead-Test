@@ -44,29 +44,29 @@
       "title": "House/Condo/Apartment",
       "listings": [
         {
-          "name": "Entire Home in Lead, South Dakota",
-          "description": "A fully furnished entire home, ideal for crew members who want a private house with full amenities during their stay.",
+          "name": "Grand Cozy Retreat in Downtown Lead",
+          "description": "Entire home minutes from Deadwood and the Black Hills. Sleeps up to 6 with 2 bedrooms, 3 beds, and 1 bath, plus a fully equipped kitchen, in-unit washer/dryer, and a fenced patio with gas grill.",
           "address": "Lead, South Dakota",
           "priceRange": "Check rates on Airbnb",
-          "image": "",
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1687955270668350488/original/85be5f3a-3432-4d77-900e-446c617d45cf.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/1687955270668350488",
-          "amenities": ["wifi", "kitchen", "parking", "laundry"]
+          "amenities": ["wifi", "kitchen", "parking", "laundry", "ac"]
         },
         {
-          "name": "Entire Condo near Lead, South Dakota",
-          "description": "A fully furnished condo with private entrance, great for workers who prefer a quieter, low-maintenance stay.",
+          "name": "Renovated Condo in Lead",
+          "description": "Recently renovated 2-bedroom, 2-bath condo with two king beds, full kitchen, AC, electric fireplace, and a patio with city views. 5 minutes to Deadwood's casinos and 10 minutes to Terry Peak Ski Area.",
           "address": "Lead, South Dakota area",
           "priceRange": "Check rates on Airbnb",
-          "image": "",
+          "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/7c20a280-44ce-4539-99ff-1f35d47fc369.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/1430573648771734632",
-          "amenities": ["wifi", "kitchen", "parking", "laundry"]
+          "amenities": ["wifi", "kitchen", "parking", "laundry", "ac"]
         },
         {
-          "name": "Entire Rental Apartment Unit near Lead, South Dakota",
-          "description": "A private, fully furnished apartment unit, a comfortable option for longer-term stays during the project.",
+          "name": "Whiskey Water Condo",
+          "description": "Charming 2-bedroom vacation condo in the heart of Lead, sleeps 5 with 3 beds and 1 bath. Full kitchen with breakfast bar, gas fireplace, private patio with mountain views, and free parking.",
           "address": "Lead, South Dakota area",
           "priceRange": "Check rates on Airbnb",
-          "image": "",
+          "image": "https://a0.muscache.com/im/pictures/miso/Hosting-840689433171566601/original/3bc0c60f-5367-4477-975e-0518ef0c914a.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/840689433171566601",
           "amenities": ["wifi", "kitchen", "parking", "laundry"]
         }
