@@ -35,10 +35,20 @@ h1, h2, h3 {
 }
 
 /* Hero / header */
-.hero {
+.hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     linear-gradient(180deg, rgba(6, 18, 41, 0.25) 0%, rgba(6, 18, 41, 0.6) 100%),
     url("../images/surf-lead-sd-hero.jpeg") center center / cover no-repeat;
+  filter: blur(0px);
+  transform: scale(1.08);
+  transition: filter 0.2s ease;
+  will-change: filter;
+}
+
+.hero {
   color: #fff;
   height: 100vh;
   display: flex;
@@ -299,9 +309,9 @@ main {
   position: relative;
   z-index: 1;
   background:
-    radial-gradient(circle at 12% 8%, rgba(10, 61, 145, 0.08) 0%, transparent 35%),
-    radial-gradient(circle at 88% 28%, rgba(255, 111, 30, 0.08) 0%, transparent 35%),
-    var(--bg);
+    radial-gradient(circle at 12% 8%, rgba(10, 61, 145, 0.1) 0%, transparent 35%),
+    radial-gradient(circle at 88% 28%, rgba(255, 111, 30, 0.1) 0%, transparent 35%),
+    rgba(244, 246, 251, 0.88);
   border-radius: 28px 28px 0 0;
   box-shadow: 0 -20px 40px rgba(16, 24, 50, 0.18);
   margin-top: -28px;
