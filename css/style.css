@@ -339,6 +339,11 @@ main > *:last-child {
   align-items: center;
   gap: 16px;
   margin: 0 0 28px;
+  padding: 18px 22px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
 }
 
 .section-icon {
