@@ -17,7 +17,7 @@
           "name": "Super 8 by Wyndham Deadwood/Black Hills Area",
           "description": "Budget-friendly hotel on the Mickelson Trail with an indoor pool, hot tub, on-site casino, and free continental breakfast.",
           "address": "196 Cliff Street, Deadwood, SD 57732",
-          "priceRange": "Check rates on booking site",
+          "priceRange": "Check rates & availability",
           "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/619-super-8-deadwood-3794.jpg",
           "bookingUrl": "https://www.wyndhamhotels.com/super-8/deadwood-south-dakota/super-8-deadwood-black-hills-area/overview?CID=LC:yytq4fvvehxh7se:3557&iata=00093796",
           "amenities": ["wifi", "breakfast", "pool", "hotTub", "parking", "casino"]
@@ -26,7 +26,7 @@
           "name": "Deadwood Gulch Resort, Trademark Collection by Wyndham",
           "description": "Resort along Whitewood Creek with a 24/7 casino, fitness center, hot tub, and rooms featuring mini-fridges and microwaves.",
           "address": "304 Cliff St, Deadwood, SD 57732",
-          "priceRange": "Check rates on booking site",
+          "priceRange": "Check rates & availability",
           "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/150-deadwood-gulch-gaming-resort-4717.jpg",
           "bookingUrl": "https://www.wyndhamhotels.com/trademark/deadwood-south-dakota/deadwood-gulch%20resort-trademark-collection/overview?CID=LC:4d7auublw4ufaga:56079&iata=00093796",
           "amenities": ["wifi", "hotTub", "gym", "lounge", "parking", "casino", "kitchen"]
@@ -35,7 +35,7 @@
           "name": "Comfort Inn & Suites Deadwood",
           "description": "Smoke-free hotel with an indoor heated pool, hot tub, fitness center, free hot breakfast, and on-site lounge.",
           "address": "225 Cliff St, Deadwood, SD 57732",
-          "priceRange": "Check rates on booking site",
+          "priceRange": "Check rates & availability",
           "image": "https://api.travelsouthdakota.com/sites/default/files/listing_images/603-deadwood-comfort-inn-and-suites-3696.jpg",
           "bookingUrl": "https://www.choicehotels.com/south-dakota/deadwood/comfort-inn-hotels/sd053?mc=llgoxxpx",
           "amenities": ["wifi", "breakfast", "pool", "hotTub", "gym", "lounge", "laundry", "parking"]
@@ -52,7 +52,7 @@
           "name": "Grand Cozy Retreat in Downtown Lead",
           "description": "Entire home minutes from Deadwood and the Black Hills. Sleeps up to 6 with 2 bedrooms, 3 beds, and 1 bath, plus a fully equipped kitchen, in-unit washer/dryer, and a fenced patio with gas grill.",
           "address": "Lead, South Dakota",
-          "priceRange": "Check rates on Airbnb",
+          "priceRange": "Check rates & availability",
           "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1687955270668350488/original/85be5f3a-3432-4d77-900e-446c617d45cf.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/1687955270668350488",
           "amenities": ["wifi", "kitchen", "parking", "laundry", "ac"]
@@ -61,7 +61,7 @@
           "name": "Renovated Condo in Lead",
           "description": "Recently renovated 2-bedroom, 2-bath condo with two king beds, full kitchen, AC, electric fireplace, and a patio with city views. 5 minutes to Deadwood's casinos and 10 minutes to Terry Peak Ski Area.",
           "address": "Lead, South Dakota area",
-          "priceRange": "Check rates on Airbnb",
+          "priceRange": "Check rates & availability",
           "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/7c20a280-44ce-4539-99ff-1f35d47fc369.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/1430573648771734632",
           "amenities": ["wifi", "kitchen", "parking", "laundry", "ac"]
@@ -70,7 +70,7 @@
           "name": "Whiskey Water Condo",
           "description": "Charming 2-bedroom vacation condo in the heart of Lead, sleeps 5 with 3 beds and 1 bath. Full kitchen with breakfast bar, gas fireplace, private patio with mountain views, and free parking.",
           "address": "Lead, South Dakota area",
-          "priceRange": "Check rates on Airbnb",
+          "priceRange": "Check rates & availability",
           "image": "https://a0.muscache.com/im/pictures/miso/Hosting-840689433171566601/original/3bc0c60f-5367-4477-975e-0518ef0c914a.jpeg?im_w=720",
           "bookingUrl": "https://www.airbnb.com/rooms/840689433171566601",
           "amenities": ["wifi", "kitchen", "parking", "laundry"]
