@@ -10,6 +10,8 @@
     {
       "id": "hotels",
       "title": "Hotels & Resorts",
+      "icon": "🏨",
+      "subtitle": "Comfortable stays with breakfast, pools, and amenities just minutes from the project site.",
       "listings": [
         {
           "name": "Super 8 by Wyndham Deadwood/Black Hills Area",
@@ -43,6 +45,8 @@
     {
       "id": "houses",
       "title": "House/Condo/Apartment",
+      "icon": "🏡",
+      "subtitle": "Fully furnished homes and condos for longer stays, with kitchens and laundry on-site.",
       "listings": [
         {
           "name": "Grand Cozy Retreat in Downtown Lead",

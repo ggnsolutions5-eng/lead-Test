@@ -298,10 +298,14 @@ h1, h2, h3 {
 main {
   position: relative;
   z-index: 1;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(10, 61, 145, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 88% 28%, rgba(255, 111, 30, 0.08) 0%, transparent 35%),
+    var(--bg);
   border-radius: 28px 28px 0 0;
   box-shadow: 0 -20px 40px rgba(16, 24, 50, 0.18);
   margin-top: -28px;
+  overflow: hidden;
 }
 
 main > * {
@@ -322,57 +326,109 @@ main > *:last-child {
 
 .category-section {
   background: transparent;
-  margin: 48px 0;
+  margin: 56px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 28px;
+}
+
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  font-size: 1.7rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(10, 61, 145, 0.12), rgba(255, 111, 30, 0.16));
+  box-shadow: var(--shadow-sm);
 }
 
 .category-section h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 800;
   color: var(--primary-dark);
-  margin: 0 0 24px;
-  padding-bottom: 10px;
-  border-bottom: 4px solid var(--accent);
-  display: inline-block;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.section-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
-  gap: 18px;
+  gap: 22px;
   justify-content: center;
 }
 
 .card {
   background: var(--card-bg);
-  border-radius: var(--radius);
+  border-radius: 18px;
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
 }
 
 .card.reveal:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.01);
   box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 170px;
   object-fit: cover;
   background: #ddd;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .card.reveal:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08);
+}
+
+.price-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(6px);
 }
 
 .card-body {
-  padding: 14px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -380,7 +436,7 @@ main > *:last-child {
 
 .card-body h3 {
   margin: 0 0 6px;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
 }
@@ -393,13 +449,6 @@ main > *:last-child {
 
 .card-body .address::before {
   content: "📍 ";
-}
-
-.card-body .price {
-  font-size: 0.85rem;
-  color: var(--primary);
-  font-weight: 700;
-  margin: 8px 0 2px;
 }
 
 .card-body .description {
@@ -422,13 +471,13 @@ main > *:last-child {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: var(--bg);
+  background: linear-gradient(135deg, rgba(10, 61, 145, 0.06), rgba(255, 111, 30, 0.06));
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.78rem;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .amenity-label {
@@ -439,10 +488,24 @@ main > *:last-child {
   .amenity-label {
     display: none;
   }
+
+  .section-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+  }
+
+  .category-section h2 {
+    font-size: 1.35rem;
+  }
 }
 
 .book-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   text-align: center;
   background: linear-gradient(135deg, var(--accent) 0%, #ff8c4a 100%);
   color: #fff;
@@ -453,7 +516,15 @@ main > *:last-child {
   margin-top: 14px;
   letter-spacing: 0.3px;
   box-shadow: 0 6px 16px rgba(255, 111, 30, 0.3);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, gap 0.2s ease;
+}
+
+.book-btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.book-btn:hover .book-btn-arrow {
+  transform: translateX(4px);
 }
 
 .book-btn:hover {

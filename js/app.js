@@ -49,7 +49,13 @@ function renderCategories(categories) {
       const cards = cat.listings.map(renderCard).join("");
       return `
         <section class="category-section reveal" id="${cat.id}">
-          <h2>${cat.title}</h2>
+          <div class="section-header">
+            <span class="section-icon">${cat.icon || ""}</span>
+            <div>
+              <h2>${cat.title}</h2>
+              ${cat.subtitle ? `<p class="section-subtitle">${cat.subtitle}</p>` : ""}
+            </div>
+          </div>
           <div class="cards">${cards || "<p>No listings yet.</p>"}</div>
         </section>
       `;
@@ -61,14 +67,18 @@ function renderCard(listing) {
   const image = listing.image && listing.image.trim() !== "" ? listing.image : PLACEHOLDER_IMAGE;
   return `
     <div class="card reveal">
-      <img src="${image}" alt="${listing.name}" />
+      <div class="card-image">
+        <img src="${image}" alt="${listing.name}" />
+        ${listing.priceRange ? `<span class="price-badge">${listing.priceRange}</span>` : ""}
+      </div>
       <div class="card-body">
         <h3>${listing.name}</h3>
         <p class="address">${listing.address || ""}</p>
-        <p class="price">${listing.priceRange || ""}</p>
         <p class="description">${listing.description || ""}</p>
         ${renderAmenities(listing.amenities)}
-        <a class="book-btn" href="${listing.bookingUrl}" target="_blank" rel="noopener noreferrer">Book Now</a>
+        <a class="book-btn" href="${listing.bookingUrl}" target="_blank" rel="noopener noreferrer">
+          View &amp; Book <span class="book-btn-arrow">&rarr;</span>
+        </a>
       </div>
     </div>
   `;
