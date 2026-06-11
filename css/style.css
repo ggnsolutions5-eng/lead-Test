@@ -40,7 +40,7 @@ h1, h2, h3 {
     linear-gradient(180deg, rgba(6, 18, 41, 0.25) 0%, rgba(6, 18, 41, 0.6) 100%),
     url("../images/surf-lead-sd-hero.jpeg") center center / cover no-repeat;
   color: #fff;
-  min-height: 78vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
