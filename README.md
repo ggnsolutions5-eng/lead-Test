@@ -22,6 +22,9 @@ Motels, Airbnb) has a `listings` array. Each listing supports:
 - `priceRange` - e.g. "$80 - $120/night"
 - `image` - URL to an image (leave empty `""` for a placeholder)
 - `bookingUrl` - link to the property's booking page or listing
+- `amenities` - optional array of amenity keys shown as icons. Supported keys:
+  `wifi`, `breakfast`, `parking`, `hotTub`, `pool`, `gym`, `lounge`, `shuttle`,
+  `pets`, `kitchen`, `laundry`, `ac`
 
 You can also edit `siteInfo` to change the company name, project name, and intro text.
 

@@ -15,7 +15,8 @@
           "address": "395 Glendale Dr, Lead, SD 57754",
           "priceRange": "Contact hotel for current rates",
           "image": "https://blackstonelodgelead.com/wp-content/uploads/2022/04/Outside-Entry-1024x947.jpg",
-          "bookingUrl": "https://blackstonelodgelead.com/"
+          "bookingUrl": "https://blackstonelodgelead.com/",
+          "amenities": ["wifi", "breakfast", "parking", "hotTub", "lounge", "shuttle", "pets"]
         }
       ]
     },
