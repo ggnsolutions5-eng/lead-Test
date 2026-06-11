@@ -150,7 +150,7 @@ function setupHeroFade() {
     const opacity = Math.max(0, 1 - progress);
     hero.style.opacity = opacity;
     hero.style.pointerEvents = opacity < 0.05 ? "none" : "auto";
-    heroBg.style.filter = `blur(${progress * maxBlur}px) brightness(1.15) saturate(1.15)`;
+    heroBg.style.filter = `blur(${progress * maxBlur}px) brightness(1.35) saturate(1.35)`;
     heroBg.style.transform = `scale(${baseScale + progress * (maxScale - baseScale)})`;
   }
 

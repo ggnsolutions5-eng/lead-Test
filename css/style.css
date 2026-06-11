@@ -44,10 +44,10 @@ h1, h2, h3 {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(6, 18, 41, 0.15) 0%, rgba(6, 18, 41, 0.5) 100%),
+    linear-gradient(180deg, rgba(6, 18, 41, 0.05) 0%, rgba(6, 18, 41, 0.4) 100%),
     url("../images/surf-lead-sd-hero.jpeg") center center / cover no-repeat;
   transform: scale(1.08);
-  filter: blur(0px) brightness(1.15) saturate(1.15);
+  filter: blur(0px) brightness(1.35) saturate(1.35);
   transition: filter 0.2s ease, transform 0.2s ease;
   will-change: filter, transform;
 }
