@@ -4,13 +4,14 @@
   --accent: #ff6f1e;
   --accent-light: #ffb088;
   --bg: #f4f6fb;
-  --card-bg: linear-gradient(160deg, #0f2d5c 0%, #163f7a 100%);
+  --card-bg: linear-gradient(150deg, #0c1224 0%, #182645 55%, #0f1c38 100%);
   --card-text: #ffffff;
-  --card-muted: #c3d2ec;
+  --card-muted: #aab8d6;
   --text: #1a1f2b;
   --muted: #6b7280;
-  --card-border: rgba(255, 255, 255, 0.1);
-  --radius: 14px;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-accent: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 50%, var(--primary) 100%);
+  --radius: 12px;
   --shadow-sm: 0 2px 8px rgba(16, 24, 50, 0.06);
   --shadow-md: 0 8px 24px rgba(16, 24, 50, 0.10);
   --shadow-lg: 0 16px 40px rgba(16, 24, 50, 0.16);
@@ -267,18 +268,36 @@ h1, h2, h3 {
 }
 
 .feature-card {
+  position: relative;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: 26px 22px;
   text-align: center;
   box-shadow: var(--shadow-md);
+  overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-accent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 111, 30, 0.15);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-icon {
@@ -341,6 +360,7 @@ main > *:last-child {
 }
 
 .section-header {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -350,6 +370,8 @@ main > *:last-child {
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
+  overflow: hidden;
 }
 
 .section-icon {
@@ -387,8 +409,9 @@ main > *:last-child {
 }
 
 .card {
+  position: relative;
   background: var(--card-bg);
-  border-radius: 18px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   display: flex;
@@ -397,9 +420,26 @@ main > *:last-child {
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
 }
 
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
 .card.reveal:hover {
   transform: translateY(-8px) scale(1.01);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 111, 30, 0.15);
+}
+
+.card.reveal:hover::after {
+  transform: scaleX(1);
 }
 
 .card-image {
@@ -557,6 +597,7 @@ main > *:last-child {
   margin: 48px 0;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-border);
+  border-left: 3px solid var(--accent);
 }
 
 .contact-section h2 {
