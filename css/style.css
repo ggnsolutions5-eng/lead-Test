@@ -4,12 +4,13 @@
   --accent: #ff6f1e;
   --accent-light: #ffb088;
   --bg: #f4f6fb;
-  --card-bg: linear-gradient(150deg, #0c1224 0%, #182645 55%, #0f1c38 100%);
+  --card-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+  --card-blur: blur(16px) saturate(160%);
   --card-text: #ffffff;
-  --card-muted: #aab8d6;
+  --card-muted: #e4e9f5;
   --text: #1a1f2b;
   --muted: #6b7280;
-  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.25);
   --card-accent: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 50%, var(--primary) 100%);
   --radius: 12px;
   --shadow-sm: 0 2px 8px rgba(16, 24, 50, 0.06);
@@ -270,6 +271,8 @@ h1, h2, h3 {
 .feature-card {
   position: relative;
   background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: 26px 22px;
@@ -367,6 +370,8 @@ main > *:last-child {
   margin: 0 0 28px;
   padding: 18px 22px;
   background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-border);
@@ -411,6 +416,8 @@ main > *:last-child {
 .card {
   position: relative;
   background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -592,6 +599,8 @@ main > *:last-child {
 /* Contact section */
 .contact-section {
   background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
   border-radius: var(--radius);
   padding: 32px;
   margin: 48px 0;
