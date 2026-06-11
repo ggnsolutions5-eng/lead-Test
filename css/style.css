@@ -306,8 +306,7 @@ main {
   z-index: 1;
   background:
     radial-gradient(circle at 12% 8%, rgba(10, 61, 145, 0.12) 0%, transparent 35%),
-    radial-gradient(circle at 88% 28%, rgba(255, 111, 30, 0.12) 0%, transparent 35%),
-    rgba(244, 246, 251, 0.35);
+    radial-gradient(circle at 88% 28%, rgba(255, 111, 30, 0.12) 0%, transparent 35%);
   border-radius: 28px 28px 0 0;
   box-shadow: 0 -20px 40px rgba(16, 24, 50, 0.18);
   margin-top: -28px;
