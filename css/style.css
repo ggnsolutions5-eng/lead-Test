@@ -452,7 +452,7 @@ main > *:last-child {
 }
 
 .card.reveal:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 111, 30, 0.15);
 }
 
