@@ -558,8 +558,7 @@ main > *:last-child {
 .contact-fab {
   position: fixed;
   right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 24px;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -570,10 +569,11 @@ main > *:last-child {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
-  padding: 14px;
+  padding: 16px;
   border-radius: 999px;
   box-shadow: 0 10px 28px rgba(255, 111, 30, 0.4);
   overflow: hidden;
+  animation: fab-pulse 2.5s ease-in-out infinite;
   transition: padding 0.3s ease, gap 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
@@ -591,10 +591,11 @@ main > *:last-child {
 
 .contact-fab:hover {
   gap: 10px;
-  padding: 14px 22px 14px 16px;
+  padding: 16px 24px 16px 16px;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   box-shadow: 0 12px 32px rgba(10, 61, 145, 0.4);
-  transform: translateY(-50%) scale(1.04);
+  transform: scale(1.05);
+  animation-play-state: paused;
 }
 
 .contact-fab:hover .contact-fab-label {
@@ -602,14 +603,11 @@ main > *:last-child {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .contact-fab {
-    top: auto;
-    bottom: 24px;
-    transform: none;
+@keyframes fab-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 28px rgba(255, 111, 30, 0.4), 0 0 0 0 rgba(255, 111, 30, 0.4);
   }
-
-  .contact-fab:hover {
-    transform: scale(1.04);
+  50% {
+    box-shadow: 0 10px 28px rgba(255, 111, 30, 0.4), 0 0 0 10px rgba(255, 111, 30, 0);
   }
 }
