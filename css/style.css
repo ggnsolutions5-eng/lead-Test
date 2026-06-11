@@ -617,47 +617,80 @@ main > *:last-child {
   backdrop-filter: var(--card-blur);
   -webkit-backdrop-filter: var(--card-blur);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 40px;
   margin: 48px 0;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-border);
   border-left: 3px solid var(--accent);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-intro {
+  position: sticky;
+  top: 24px;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 1.6rem;
+  background: var(--card-accent);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 16px;
 }
 
 .contact-section h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  border-bottom: 4px solid var(--accent);
-  padding-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 800;
   color: var(--card-text);
-  margin-top: 0;
-  display: inline-block;
+  margin: 0 0 12px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-.contact-section > p {
+.contact-section > .contact-intro > p {
   color: var(--card-muted);
   line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 520px;
-  gap: 4px;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 #contact-form label {
   font-weight: 600;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  color: var(--card-text);
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--card-muted);
 }
 
 #contact-form input,
 #contact-form textarea {
-  padding: 12px 14px;
+  padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: inherit;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.06);
@@ -665,9 +698,15 @@ main > *:last-child {
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
+#contact-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
 #contact-form input::placeholder,
 #contact-form textarea::placeholder {
   color: var(--card-muted);
+  opacity: 0.7;
 }
 
 #contact-form input:focus,
@@ -679,12 +718,17 @@ main > *:last-child {
 }
 
 #contact-form button {
-  margin-top: 18px;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: flex-start;
   background: linear-gradient(135deg, var(--accent) 0%, #ff8c4a 100%);
   color: #fff;
   border: none;
-  padding: 14px;
-  border-radius: 10px;
+  padding: 14px 32px;
+  border-radius: 999px;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -699,10 +743,30 @@ main > *:last-child {
   transform: translateY(-2px);
 }
 
+#contact-form button:hover .book-btn-arrow {
+  transform: translateX(4px);
+}
+
 #contact-status {
   font-size: 0.9rem;
   color: var(--card-muted);
   min-height: 1.2em;
+}
+
+@media (max-width: 800px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 24px;
+  }
+
+  .contact-intro {
+    position: static;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .site-footer {
