@@ -1,0 +1,51 @@
+{
+  "siteInfo": {
+    "companyName": "GGN Solutions Inc.",
+    "projectName": "Lead, SD Construction Project",
+    "introText": "GGN Solutions Inc. has partnered with local hotels, motels, and short-term rentals near Lead, SD to make it easy for our crew to find and book accommodation during the project. Browse the options below and click through to book directly with the provider."
+  },
+  "categories": [
+    {
+      "id": "hotels",
+      "title": "Hotels",
+      "listings": [
+        {
+          "name": "Example Hotel Name",
+          "description": "Short description of the hotel, amenities, and what makes it convenient for our crew.",
+          "address": "123 Main St, Lead, SD",
+          "priceRange": "$80 - $120/night",
+          "image": "",
+          "bookingUrl": "https://example.com"
+        }
+      ]
+    },
+    {
+      "id": "motels",
+      "title": "Motels",
+      "listings": [
+        {
+          "name": "Example Motel Name",
+          "description": "Short description of the motel, amenities, and what makes it convenient for our crew.",
+          "address": "456 Side St, Lead, SD",
+          "priceRange": "$50 - $80/night",
+          "image": "",
+          "bookingUrl": "https://example.com"
+        }
+      ]
+    },
+    {
+      "id": "airbnb",
+      "title": "Airbnb / Short-Term Rentals",
+      "listings": [
+        {
+          "name": "Example Airbnb Listing",
+          "description": "Short description of the rental, number of bedrooms, and notes for crew sharing a unit.",
+          "address": "789 Rental Rd, Lead, SD",
+          "priceRange": "$100 - $150/night",
+          "image": "",
+          "bookingUrl": "https://www.airbnb.com"
+        }
+      ]
+    }
+  ]
+}
