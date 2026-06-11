@@ -4,7 +4,7 @@
   --accent: #ff6f1e;
   --accent-light: #ffb088;
   --bg: #f4f6fb;
-  --card-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+  --card-bg: linear-gradient(150deg, rgba(20, 28, 50, 0.45) 0%, rgba(20, 28, 50, 0.3) 100%);
   --card-blur: blur(16px) saturate(160%);
   --card-text: #ffffff;
   --card-muted: #e4e9f5;
@@ -513,12 +513,14 @@ main > *:last-child {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--card-text);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .card-body .address {
   font-size: 0.85rem;
   color: var(--card-muted);
   margin: 2px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .card-body .address::before {
@@ -530,6 +532,7 @@ main > *:last-child {
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--card-muted);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   flex: 1;
 }
 
