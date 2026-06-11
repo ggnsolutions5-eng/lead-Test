@@ -4,12 +4,13 @@
   --accent: #ff6f1e;
   --accent-light: #ffb088;
   --bg: #f4f6fb;
-  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-bg: linear-gradient(160deg, #0f2d5c 0%, #163f7a 100%);
+  --card-text: #ffffff;
+  --card-muted: #c3d2ec;
   --text: #1a1f2b;
   --muted: #6b7280;
-  --border: rgba(255, 255, 255, 0.5);
+  --card-border: rgba(255, 255, 255, 0.1);
   --radius: 14px;
-  --glass-blur: blur(14px) saturate(160%);
   --shadow-sm: 0 2px 8px rgba(16, 24, 50, 0.06);
   --shadow-md: 0 8px 24px rgba(16, 24, 50, 0.10);
   --shadow-lg: 0 16px 40px rgba(16, 24, 50, 0.16);
@@ -267,19 +268,17 @@ h1, h2, h3 {
 
 .feature-card {
   background: var(--card-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: 26px 22px;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-icon {
@@ -290,7 +289,7 @@ h1, h2, h3 {
   height: 56px;
   font-size: 1.6rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(10, 61, 145, 0.1), rgba(255, 111, 30, 0.12));
+  background: linear-gradient(135deg, rgba(255, 111, 30, 0.25), rgba(255, 255, 255, 0.08));
   margin-bottom: 14px;
 }
 
@@ -298,14 +297,14 @@ h1, h2, h3 {
   margin: 0 0 8px;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--primary-dark);
+  color: var(--card-text);
 }
 
 .feature-card p {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--muted);
+  color: var(--card-muted);
 }
 
 main {
@@ -348,11 +347,9 @@ main > *:last-child {
   margin: 0 0 28px;
   padding: 18px 22px;
   background: var(--card-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--card-border);
 }
 
 .section-icon {
@@ -364,14 +361,14 @@ main > *:last-child {
   flex-shrink: 0;
   font-size: 1.7rem;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(10, 61, 145, 0.12), rgba(255, 111, 30, 0.16));
+  background: linear-gradient(135deg, rgba(255, 111, 30, 0.25), rgba(255, 255, 255, 0.08));
   box-shadow: var(--shadow-sm);
 }
 
 .category-section h2 {
   font-size: 1.7rem;
   font-weight: 800;
-  color: var(--primary-dark);
+  color: var(--card-text);
   margin: 0;
   letter-spacing: -0.3px;
 }
@@ -379,7 +376,7 @@ main > *:last-child {
 .section-subtitle {
   margin: 4px 0 0;
   font-size: 0.92rem;
-  color: var(--muted);
+  color: var(--card-muted);
 }
 
 .cards {
@@ -391,14 +388,12 @@ main > *:last-child {
 
 .card {
   background: var(--card-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 18px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border);
+  border: 1px solid var(--card-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
 }
 
@@ -459,12 +454,12 @@ main > *:last-child {
   margin: 0 0 6px;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text);
+  color: var(--card-text);
 }
 
 .card-body .address {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--card-muted);
   margin: 2px 0;
 }
 
@@ -476,7 +471,7 @@ main > *:last-child {
   margin: 8px 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--card-muted);
   flex: 1;
 }
 
@@ -492,12 +487,12 @@ main > *:last-child {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: linear-gradient(135deg, rgba(10, 61, 145, 0.06), rgba(255, 111, 30, 0.06));
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.78rem;
-  color: var(--muted);
+  color: var(--card-muted);
   font-weight: 600;
 }
 
@@ -557,13 +552,11 @@ main > *:last-child {
 /* Contact section */
 .contact-section {
   background: var(--card-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius);
   padding: 32px;
   margin: 48px 0;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--card-border);
 }
 
 .contact-section h2 {
@@ -571,13 +564,13 @@ main > *:last-child {
   font-weight: 700;
   border-bottom: 4px solid var(--accent);
   padding-bottom: 10px;
-  color: var(--primary-dark);
+  color: var(--card-text);
   margin-top: 0;
   display: inline-block;
 }
 
 .contact-section > p {
-  color: var(--muted);
+  color: var(--card-muted);
   line-height: 1.6;
 }
 
@@ -592,26 +585,32 @@ main > *:last-child {
   font-weight: 600;
   margin-top: 12px;
   font-size: 0.9rem;
-  color: var(--text);
+  color: var(--card-text);
 }
 
 #contact-form input,
 #contact-form textarea {
   padding: 12px 14px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   font-family: inherit;
   font-size: 0.95rem;
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--card-text);
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: var(--card-muted);
 }
 
 #contact-form input:focus,
 #contact-form textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(10, 61, 145, 0.12);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 111, 30, 0.18);
 }
 
 #contact-form button {
@@ -637,7 +636,7 @@ main > *:last-child {
 
 #contact-status {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--card-muted);
   min-height: 1.2em;
 }
 
