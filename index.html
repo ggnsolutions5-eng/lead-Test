@@ -20,6 +20,27 @@
     <nav class="category-nav" id="category-nav"></nav>
 
     <div id="listings-container"></div>
+
+    <section class="contact-section" id="contact">
+      <h2>Have a Complaint or Issue?</h2>
+      <p>If you have a problem with your accommodation, let us know and we'll respond as soon as possible.</p>
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="property">Which Property?</label>
+        <input type="text" id="property" name="property" placeholder="e.g. Blackstone Lodge & Suites" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+        <p id="contact-status"></p>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">

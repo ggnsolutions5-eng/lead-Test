@@ -171,6 +171,63 @@ main {
   background: var(--primary);
 }
 
+.contact-section {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 32px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  gap: 4px;
+}
+
+#contact-form label {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+#contact-form button {
+  margin-top: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background: var(--primary);
+}
+
+#contact-status {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .site-footer {
   text-align: center;
   padding: 16px;

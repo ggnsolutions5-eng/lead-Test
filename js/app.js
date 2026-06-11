@@ -34,9 +34,9 @@ function renderSiteInfo(siteInfo) {
 
 function renderNav(categories) {
   const nav = document.getElementById("category-nav");
-  nav.innerHTML = categories
-    .map((cat) => `<a href="#${cat.id}">${cat.title}</a>`)
-    .join("");
+  const links = categories.map((cat) => `<a href="#${cat.id}">${cat.title}</a>`);
+  links.push('<a href="#contact">Contact / Complaints</a>');
+  nav.innerHTML = links.join("");
 }
 
 function renderCategories(categories) {
@@ -83,4 +83,30 @@ function renderAmenities(amenities) {
   return `<div class="amenities">${icons}</div>`;
 }
 
+function setupContactForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    status.textContent = "Sending...";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      status.textContent = "Something went wrong. Please try again.";
+    }
+  });
+}
+
 loadListings();
+setupContactForm();
