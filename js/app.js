@@ -127,5 +127,20 @@ function setupContactForm() {
   });
 }
 
+function setupHeroFade() {
+  const hero = document.querySelector(".hero");
+  const fadeDistance = window.innerHeight * 0.85;
+
+  function onScroll() {
+    const opacity = Math.max(0, 1 - window.scrollY / fadeDistance);
+    hero.style.opacity = opacity;
+    hero.style.pointerEvents = opacity < 0.05 ? "none" : "auto";
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
 loadListings();
 setupContactForm();
+setupHeroFade();
