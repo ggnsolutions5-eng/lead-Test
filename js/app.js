@@ -23,6 +23,7 @@ async function loadListings() {
   renderSiteInfo(data.siteInfo);
   renderNav(data.categories);
   renderCategories(data.categories);
+  setupScrollReveal();
 }
 
 function renderSiteInfo(siteInfo) {
@@ -47,7 +48,7 @@ function renderCategories(categories) {
     .map((cat) => {
       const cards = cat.listings.map(renderCard).join("");
       return `
-        <section class="category-section" id="${cat.id}">
+        <section class="category-section reveal" id="${cat.id}">
           <h2>${cat.title}</h2>
           <div class="cards">${cards || "<p>No listings yet.</p>"}</div>
         </section>
@@ -59,7 +60,7 @@ function renderCategories(categories) {
 function renderCard(listing) {
   const image = listing.image && listing.image.trim() !== "" ? listing.image : PLACEHOLDER_IMAGE;
   return `
-    <div class="card">
+    <div class="card reveal">
       <img src="${image}" alt="${listing.name}" />
       <div class="card-body">
         <h3>${listing.name}</h3>
@@ -71,6 +72,22 @@ function renderCard(listing) {
       </div>
     </div>
   `;
+}
+
+function setupScrollReveal() {
+  const elements = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  elements.forEach((el) => observer.observe(el));
 }
 
 function renderAmenities(amenities) {
