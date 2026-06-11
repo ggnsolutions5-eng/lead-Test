@@ -141,7 +141,7 @@ function setupHeroFade() {
   const hero = document.querySelector(".hero");
   const heroBg = document.querySelector(".hero-bg");
   const fadeDistance = window.innerHeight * 0.85;
-  const maxBlur = 6;
+  const maxBlur = 3;
 
   function onScroll() {
     const progress = Math.min(1, window.scrollY / fadeDistance);
