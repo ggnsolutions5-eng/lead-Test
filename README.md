@@ -28,25 +28,16 @@ Motels, Airbnb) has a `listings` array. Each listing supports:
 
 You can also edit `siteInfo` to change the company name, project name, and intro text.
 
-## Setting up the complaint/contact form
+## Complaint/contact form
 
 The "Contact / Complaints" section sends messages by email using
 [Formspree](https://formspree.io), a free service that emails form
-submissions to you with no backend code needed.
+submissions with no backend code needed. The form is wired to endpoint
+`https://formspree.io/f/mpqejrnj`, which delivers to rick@ggnsolution.com.
 
-1. Go to https://formspree.io and sign up using **rick@ggnsolution.com**.
-2. Click "New Form", give it a name (e.g. "Lead SD Accommodation Complaints"),
-   and create it.
-3. Formspree will show you an endpoint URL like
-   `https://formspree.io/f/abc1234`. Copy the part after `/f/` (e.g. `abc1234`).
-4. In `index.html`, find the line:
-   ```html
-   <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-   ```
-   and replace `YOUR_FORM_ID` with the ID you copied.
-5. Check rick@ggnsolution.com for a confirmation email from Formspree the
-   first time someone submits the form, and click the confirmation link to
-   activate it. After that, all submissions are emailed automatically.
+The first time someone submits the form, Formspree sends a confirmation
+email to rick@ggnsolution.com - click the activation link in that email to
+start receiving submissions automatically.
 
 ## Running locally
 
