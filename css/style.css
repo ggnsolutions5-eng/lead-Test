@@ -736,6 +736,9 @@ main > *:last-child {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-self: end;
+  width: 100%;
+  max-width: 360px;
 }
 
 .contact-section .contact-intro {
@@ -881,6 +884,11 @@ main > *:last-child {
 @media (max-width: 820px) {
   .support-section {
     grid-template-columns: 1fr;
+  }
+
+  .suggestion-section {
+    justify-self: stretch;
+    max-width: none;
   }
 }
 
