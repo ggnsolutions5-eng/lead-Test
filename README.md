@@ -5,6 +5,8 @@ Group) construction project in Lead, SD can browse partner hotels and short-term
 furnished houses/apartments managed by GGN Solutions Inc., and click "View & Book"
 to book and pay directly with each provider.
 
+**Live site:** https://ggnsolutions5-eng.github.io/lead-Test/
+
 ## Project structure
 
 - `index.html` - main page
