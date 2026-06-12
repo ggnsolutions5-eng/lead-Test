@@ -63,6 +63,13 @@
           "address": "Lead, South Dakota area",
           "priceRange": "Check rates & availability",
           "image": "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/7c20a280-44ce-4539-99ff-1f35d47fc369.jpeg?im_w=720",
+          "images": [
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/7c20a280-44ce-4539-99ff-1f35d47fc369.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/3dfd4555-603c-4f48-bbfa-1e4417f74748.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/8abe1221-a80b-48c2-a3e1-34c21fa2214d.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/9525d74d-8a9b-465d-bd08-4dfd82d486ed.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1430573648771734632/original/47547f7e-e3e8-43f7-841e-125aa1f8e66b.jpeg?im_w=720"
+          ],
           "bookingUrl": "https://www.airbnb.com/rooms/1430573648771734632",
           "amenities": ["wifi", "kitchen", "parking", "laundry", "ac"]
         },

@@ -24,6 +24,7 @@ async function loadListings() {
   renderNav(data.categories);
   renderCategories(data.categories);
   setupScrollReveal();
+  setupGalleries();
 }
 
 function renderSiteInfo(siteInfo) {
@@ -64,11 +65,29 @@ function renderCategories(categories) {
 }
 
 function renderCard(listing) {
-  const image = listing.image && listing.image.trim() !== "" ? listing.image : PLACEHOLDER_IMAGE;
+  const images = listing.images && listing.images.length > 0
+    ? listing.images
+    : [listing.image && listing.image.trim() !== "" ? listing.image : PLACEHOLDER_IMAGE];
+
+  const slides = images
+    .map((src, i) => `<img src="${src}" alt="${listing.name}" class="gallery-img${i === 0 ? " active" : ""}" />`)
+    .join("");
+
+  const arrows = images.length > 1
+    ? `
+      <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous photo">&#8249;</button>
+      <button type="button" class="gallery-arrow gallery-next" aria-label="Next photo">&#8250;</button>
+      <div class="gallery-dots">
+        ${images.map((_, i) => `<span class="gallery-dot${i === 0 ? " active" : ""}"></span>`).join("")}
+      </div>
+    `
+    : "";
+
   return `
     <div class="card reveal">
       <div class="card-image">
-        <img src="${image}" alt="${listing.name}" />
+        <div class="gallery">${slides}</div>
+        ${arrows}
         ${listing.priceRange ? `<span class="price-badge">${listing.priceRange}</span>` : ""}
       </div>
       <div class="card-body">
@@ -82,6 +101,32 @@ function renderCard(listing) {
       </div>
     </div>
   `;
+}
+
+function setupGalleries() {
+  document.querySelectorAll(".card-image").forEach((cardImage) => {
+    const slides = cardImage.querySelectorAll(".gallery-img");
+    const dots = cardImage.querySelectorAll(".gallery-dot");
+    const prev = cardImage.querySelector(".gallery-prev");
+    const next = cardImage.querySelector(".gallery-next");
+    if (!prev || !next) return;
+
+    let index = 0;
+    const show = (newIndex) => {
+      index = (newIndex + slides.length) % slides.length;
+      slides.forEach((img, i) => img.classList.toggle("active", i === index));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+    };
+
+    prev.addEventListener("click", (event) => {
+      event.preventDefault();
+      show(index - 1);
+    });
+    next.addEventListener("click", (event) => {
+      event.preventDefault();
+      show(index + 1);
+    });
+  });
 }
 
 function setupScrollReveal() {
