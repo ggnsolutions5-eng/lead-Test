@@ -700,26 +700,34 @@ main > *:last-child {
   transform: translateY(-2px);
 }
 
-/* Contact section */
-.contact-section {
+/* Support section (complaints + suggestions) */
+.support-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 48px 0;
+}
+
+.support-card {
   background: var(--card-bg);
   backdrop-filter: var(--card-blur);
   -webkit-backdrop-filter: var(--card-blur);
   border-radius: var(--radius);
-  padding: 40px;
-  margin: 48px 0;
+  padding: 36px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-border);
   border-left: 3px solid var(--accent);
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.contact-intro {
-  position: sticky;
-  top: 24px;
+.support-card:nth-child(2) {
+  border-left-color: var(--primary);
+}
+
+.support-card:nth-child(2) .contact-icon {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-light) 100%);
 }
 
 .contact-icon {
@@ -735,21 +743,21 @@ main > *:last-child {
   margin-bottom: 16px;
 }
 
-.contact-section h2 {
-  font-size: 1.7rem;
+.contact-intro h2 {
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--card-text);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-.contact-section > .contact-intro > p {
+.contact-intro p {
   color: var(--card-muted);
   line-height: 1.6;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-#contact-form {
+.support-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -767,7 +775,7 @@ main > *:last-child {
   gap: 6px;
 }
 
-#contact-form label {
+.support-form label {
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.3px;
@@ -775,8 +783,8 @@ main > *:last-child {
   color: var(--card-muted);
 }
 
-#contact-form input,
-#contact-form textarea {
+.support-form input,
+.support-form textarea {
   padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
@@ -787,26 +795,26 @@ main > *:last-child {
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-#contact-form textarea {
+.support-form textarea {
   resize: vertical;
   min-height: 110px;
 }
 
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
+.support-form input::placeholder,
+.support-form textarea::placeholder {
   color: var(--card-muted);
   opacity: 0.7;
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
+.support-form input:focus,
+.support-form textarea:focus {
   outline: none;
   border-color: var(--accent);
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 0 3px rgba(255, 111, 30, 0.18);
 }
 
-#contact-form button {
+.support-form button {
   margin-top: 4px;
   display: inline-flex;
   align-items: center;
@@ -826,31 +834,40 @@ main > *:last-child {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
 }
 
-#contact-form button:hover {
+.support-form button:hover {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   box-shadow: 0 8px 20px rgba(10, 61, 145, 0.3);
   transform: translateY(-2px);
 }
 
-#contact-form button:hover .book-btn-arrow {
+.support-form button:hover .book-btn-arrow {
   transform: translateX(4px);
 }
 
-#contact-status {
+.support-card:nth-child(2) .support-form button {
+  background: linear-gradient(135deg, var(--primary) 0%, #1f5fc4 100%);
+  box-shadow: 0 6px 16px rgba(10, 61, 145, 0.3);
+}
+
+.support-card:nth-child(2) .support-form button:hover {
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8c4a 100%);
+  box-shadow: 0 8px 20px rgba(255, 111, 30, 0.3);
+}
+
+#contact-status,
+#suggestion-status {
   font-size: 0.9rem;
   color: var(--card-muted);
   min-height: 1.2em;
 }
 
-@media (max-width: 800px) {
-  .contact-section {
+@media (max-width: 900px) {
+  .support-section {
     grid-template-columns: 1fr;
-    padding: 28px;
-    gap: 24px;
   }
 
-  .contact-intro {
-    position: static;
+  .support-card {
+    padding: 28px;
   }
 
   .form-row {

@@ -157,9 +157,9 @@ function renderAmenities(amenities) {
   return `<div class="amenities">${icons}</div>`;
 }
 
-function setupContactForm() {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("contact-status");
+function setupSupportForm(formId, statusId, successMessage) {
+  const form = document.getElementById(formId);
+  const status = document.getElementById(statusId);
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -171,7 +171,7 @@ function setupContactForm() {
         headers: { Accept: "application/json" },
       });
       if (response.ok) {
-        status.textContent = "Thanks! Your message has been sent.";
+        status.textContent = successMessage;
         form.reset();
       } else {
         status.textContent = "Something went wrong. Please try again.";
@@ -204,5 +204,6 @@ function setupHeroFade() {
 }
 
 loadListings();
-setupContactForm();
+setupSupportForm("contact-form", "contact-status", "Thanks! Your message has been sent.");
+setupSupportForm("suggestion-form", "suggestion-status", "Thanks! Your suggestion has been sent.");
 setupHeroFade();
