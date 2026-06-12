@@ -10,9 +10,6 @@ to book and pay directly with each provider.
 - `index.html` - main page
 - `css/style.css` - styling
 - `js/app.js` - loads listings and renders the page
-- `images/surf-lead-sd-hero.jpeg` - homepage hero photo of the Sanford
-  Underground Research Facility (Yates/Ross headframes) in Lead, SD, by
-  Stephen Kenny / sanfordlab.org
 - `data/listings.json` - all accommodation listings (edit this file to add/remove/update listings)
 
 ## Editing listings
